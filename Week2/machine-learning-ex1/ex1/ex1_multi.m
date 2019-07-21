@@ -104,7 +104,14 @@ fprintf('\n');
 % ====================== YOUR CODE HERE ======================
 % Recall that the first column of X is all-ones. Thus, it does
 % not need to be normalized.
-price = 0; % You should change this
+
+% theta: 3*1
+
+new_X = [1650, 3];
+new_X = (new_X .- mu) ./ sigma;
+new_X = [1 new_X];
+price = new_X * theta; % You should change this
+
 
 
 % ============================================================
@@ -149,7 +156,13 @@ fprintf('\n');
 
 % Estimate the price of a 1650 sq-ft, 3 br house
 % ====================== YOUR CODE HERE ======================
-price = 0; % You should change this
+new_X = [1650, 3];
+new_X = [1, new_X];
+price = new_X * theta; % You should change this
+
+% @kasinxc: If the price does not match the gradient descent one, 
+% it is because the iterations are too few or alpha is too small
+% When I change to 40000 for iterations, they are the same!
 
 
 % ============================================================

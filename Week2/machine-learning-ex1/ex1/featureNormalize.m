@@ -26,6 +26,16 @@ sigma = zeros(1, size(X, 2));
 % Hint: You might find the 'mean' and 'std' functions useful.
 %       
 
+f1 = X(:, 1); % Feature 1
+f2 = X(:, 2); % Feature 2
+
+mu = [mean(f1), mean(f2)];
+sigma = [std(f1), std(f2)];
+
+X_norm_1 = (f1 .- mean(f1)) ./ std(f1);
+X_norm_2 = (f2 .- mean(f2)) ./ std(f2);
+
+X_norm = [X_norm_1, X_norm_2];
 
 
 

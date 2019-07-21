@@ -14,6 +14,14 @@ J = 0;
 %               You should set J to the cost.
 
 
+% theta: 3 * 1
+% X: m * 3
+% y: m * 1
+% delta = (X * theta - y): m * 1
+
+delta = X * theta - y;
+
+J = delta' * delta  / (2 * m); 
 
 
 
