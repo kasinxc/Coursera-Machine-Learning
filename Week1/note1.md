@@ -75,9 +75,3 @@ With unsupervised learning, there is no feedback based on the prediction results
 
 5/5
 
-
-
-## Model and Cost Function
-
-### 1. Model Representation
-
