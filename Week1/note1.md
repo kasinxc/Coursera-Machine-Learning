@@ -75,13 +75,8 @@ With unsupervised learning, there is no feedback based on the prediction results
 
 5/5
 
-
-
-## Model and Cost Function
-
 ### 1. Model Representation
 
-<<<<<<< HEAD
 Given training set, we have m number of input data. with x as input, y as output.
 
 ![model1](picture/model1.png)
