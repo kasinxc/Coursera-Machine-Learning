@@ -75,9 +75,58 @@ With unsupervised learning, there is no feedback based on the prediction results
 
 5/5
 
-
-
-## Model and Cost Function
-
 ### 1. Model Representation
 
+Given training set, we have m number of input data. with x as input, y as output.
+
+![model1](picture/model1.png)
+
+
+
+$x^{(i)}$ means the i-th input
+
+$y^{(i)}$ means the i-th output
+
+Our goal is to learn a function $$h: X \rarr  Y $$ so that h(x) is a "good" predictor for the corresponding value of y. For historical reasons, this function is called **hypothesis**. 
+
+
+
+### 2. Cost Function
+
+$$ h_{\theta}(x) = \theta_{0} + \theta_{1}x$$,  we have $\bf{\theta}$ as parameters.
+
+Our idea is to choose $\theta_{0}$ and $\theta_{1}$ so that $h_{\theta}(x)$ is close to y for our training example (x, y).
+
+In order to measure the accuracy of the hypothesis funciton, here we have $$J(\theta_{0}, \theta_{1})$$ as the **cost function**, also known as **squared error function** or **mean squared error**.
+
+> - Note that: the mean is halved $(\frac{1}{2})$ as a convenience or the computation of the gradient descent, as the derivative term of the square function will cancel out the $\frac{1}{2}$ term.
+
+![cost](picture/cost.png)
+
+
+
+#### Intuition
+
+$h_{\theta}(x)$ **is function of x while cost function $J(\theta_{0}, \theta_{1})$ is function of $\theta$. To visualize, we have the following figure with $\theta_{1} = 1$.**
+
+![$\theta$ = 1](picture/1.png) 
+
+
+
+**We also have figure with $\theta_{1} = 0.5$ as follows.**
+
+![$\theta_{1} = 0.5$](picture/0.5.png)
+
+
+
+**To plot all of them, we have** 
+
+![J](picture/J.png)
+
+**Our goal is to get the minimum J($\theta_{1}$). **
+
+**Next, we will talk about algorithms to get to the minimum automatically.**
+
+
+
+## Parameter Learning
